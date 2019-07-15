@@ -33,7 +33,7 @@ if (empty($_POST["message"])) {
 
 //Add your email here
 $EmailTo = "contatomipbr@gmail.com";
-$Subject = "New Message Received";
+$Subject = "Formulário de contato";
 
 // prepare email body text
 $Body = "";
@@ -58,7 +58,7 @@ if ($success && $errorMSG == ""){
    echo "success";
 }else{
     if($errorMSG == ""){
-        echo "Something went wrong :(";
+        echo "Algo deu errado :(";
     } else {
         echo $errorMSG;
     }
