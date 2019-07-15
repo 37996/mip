@@ -1,7 +1,8 @@
 <?php
 function sendMail($de,$para,$mensagem,$assunto)
 {
-    require_once('phpmailer/class.phpmailer.php');
+    // require_once('phpmailer/class.phpmailer.php');
+    require_once('contactform/contactform.php');
     $mail = new PHPMailer(true);
     $mail->IsSMTP();
     try {
