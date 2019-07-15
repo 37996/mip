@@ -99,7 +99,7 @@ jQuery(document).ready(function($) {
             url: action,
             // data: str,
             // data: "name=" + name + "&email=" + email + "&subject=" + subject + "&message=" + message,-----------teste
-            data: str,
+            data: 'userName=' + $("#userName").val() + '&userEmail=' + $("#userEmail").val() + '&subject=' + $("#subject").val() + '&content=' + $(content).val(),
             success: function(msg) {
                 // alert(msg);
                 if (msg == 'OK') {
