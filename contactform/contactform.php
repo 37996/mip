@@ -17,10 +17,10 @@ if (empty($_POST["email"])) {
 }
 
 // MSG SUBJECT
-if (empty($_POST["subject"])) {
+if (empty($_POST["msg_subject"])) {
     $errorMSG .= "Subject is required ";
 } else {
-    $subject = $_POST["subject"];
+    $msg_subject = $_POST["msg_subject"];
 }
 
 
@@ -33,7 +33,7 @@ if (empty($_POST["message"])) {
 
 //Add your email here
 $EmailTo = "contatomipbr@gmail.com";
-$Subject = "Formulário de contato";
+$Subject = "New Message Received";
 
 // prepare email body text
 $Body = "";
@@ -44,7 +44,7 @@ $Body .= "Email: ";
 $Body .= $email;
 $Body .= "\n";
 $Body .= "Subject: ";
-$Body .= $subject;
+$Body .= $msg_subject;
 $Body .= "\n";
 $Body .= "Message: ";
 $Body .= $message;
@@ -58,7 +58,7 @@ if ($success && $errorMSG == ""){
    echo "success";
 }else{
     if($errorMSG == ""){
-        echo "Algo deu errado :(";
+        echo "Something went wrong :(";
     } else {
         echo $errorMSG;
     }
