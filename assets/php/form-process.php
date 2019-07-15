@@ -1,7 +1,7 @@
 <?php
 
 $errorMSG = "";
-
+$headers = "Content-Type: text/html; charset=UTF-8";
 // NAME
 if (empty($_POST["name"])) {
     $errorMSG = "Name is required ";
@@ -32,7 +32,7 @@ if (empty($_POST["message"])) {
 }
 
 
-$EmailTo = "contatomipbr@gmail.com";
+$EmailTo = "contatomipbr@xil.com";
 $Subject = "New Message Received";
 
 // prepare email body text
@@ -51,8 +51,8 @@ $Body .= $message;
 $Body .= "\n";
 
 // send email
-$success = mail($EmailTo, $Subject, $Body, "From:".$email);
-
+// $success = mail($EmailTo, $Subject, $Body, "From:".$email);
+$success = mail($EmailTo, $headers, $Subject, $body, "From:".$email);
 // redirect to success page
 if ($success && $errorMSG == ""){
    echo "success";
