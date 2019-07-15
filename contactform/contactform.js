@@ -98,7 +98,8 @@ jQuery(document).ready(function($) {
             type: "POST",
             url: action,
             // data: str,
-            data: "name=" + name + "&email=" + email + "&subject=" + subject + "&message=" + message,
+            // data: "name=" + name + "&email=" + email + "&subject=" + subject + "&message=" + message,-----------teste
+            data: str,
             success: function(msg) {
                 // alert(msg);
                 if (msg == 'OK') {
