@@ -25,6 +25,7 @@ function submitForm() {
         xhrFields: {
             withCredentials: true
         },
+        crossDomain: true,
         data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&message=" + message,
         success: function(text) {
             if (text == "success") {
