@@ -37,7 +37,7 @@ if (isset($_POST['BTEnvia'])) {
  //Enviando o email 
  //==================================================== 
  if (mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers)){ 
- echo "</b>E-Mail enviado com sucesso!</b>"; 
+ //echo "</b>E-Mail enviado com sucesso!</b>"; 
  echo = "<meta http-equiv='Refresh' content='0;URL=index.html>";
  } 
  else{ 
