@@ -7,39 +7,39 @@
 
 <body>
 <?php 
-// RECEBENDO OS DADOS PREENCHIDOS DO FORMULÁRIO !
-$nome	= $_POST ["nome"];	//atribuição do campo "nome" vindo do formulário para variavel	
-$email	= $_POST ["email"];	//atribuição do campo "email" vindo do formulário para variavel
-$ddd	= $_POST ["ddd"];	//atribuição do campo "ddd" vindo do formulário para variavel
-$tel	= $_POST ["telefone"];	//atribuição do campo "telefone" vindo do formulário para variavel
-$endereco	= $_POST ["endereco"];	//atribuição do campo "endereco" vindo do formulário para variavel
-$cidade	= $_POST ["cidade"];	//atribuição do campo "cidade" vindo do formulário para variavel
-$estado	= $_POST ["estado"];	//atribuição do campo "estado" vindo do formulário para variavel
-$bairro = $_POST ["bairro"];	//atribuição do campo "bairro" vindo do formulário para variavel
-$pais	= $_POST ["pais"];	//atribuição do campo "pais" vindo do formulário para variavel
-$login	= $_POST ["login"];	//atribuição do campo "login" vindo do formulário para variavel
-$senha	= $_POST ["senha"];	//atribuição do campo "senha" vindo do formulário para variavel
-$news	= $_POST ["news"];	//atribuição do campo "news" vindo do formulário para variavel
-$sexo	= $_POST ["sexo"];	//atribuição do campo "sexo" vindo do formulário para variavel
+// RECEBENDO OS DADOS PREENCHIDOS DO FORMULï¿½RIO !
+$nome	= $_POST ["nome"];	//atribuiï¿½ï¿½o do campo "nome" vindo do formulï¿½rio para variavel	
+$email	= $_POST ["email"];	//atribuiï¿½ï¿½o do campo "email" vindo do formulï¿½rio para variavel
+$ddd	= $_POST ["ddd"];	//atribuiï¿½ï¿½o do campo "ddd" vindo do formulï¿½rio para variavel
+$tel	= $_POST ["telefone"];	//atribuiï¿½ï¿½o do campo "telefone" vindo do formulï¿½rio para variavel
+$endereco	= $_POST ["endereco"];	//atribuiï¿½ï¿½o do campo "endereco" vindo do formulï¿½rio para variavel
+$cidade	= $_POST ["cidade"];	//atribuiï¿½ï¿½o do campo "cidade" vindo do formulï¿½rio para variavel
+$estado	= $_POST ["estado"];	//atribuiï¿½ï¿½o do campo "estado" vindo do formulï¿½rio para variavel
+$bairro = $_POST ["bairro"];	//atribuiï¿½ï¿½o do campo "bairro" vindo do formulï¿½rio para variavel
+$pais	= $_POST ["pais"];	//atribuiï¿½ï¿½o do campo "pais" vindo do formulï¿½rio para variavel
+$login	= $_POST ["login"];	//atribuiï¿½ï¿½o do campo "login" vindo do formulï¿½rio para variavel
+$senha	= $_POST ["senha"];	//atribuiï¿½ï¿½o do campo "senha" vindo do formulï¿½rio para variavel
+$news	= $_POST ["news"];	//atribuiï¿½ï¿½o do campo "news" vindo do formulï¿½rio para variavel
+$sexo	= $_POST ["sexo"];	//atribuiï¿½ï¿½o do campo "sexo" vindo do formulï¿½rio para variavel
 //Gravando no banco de dados !
 
 //conectando com o localhost - mysql
 $conexao = mysql_connect("localhost","root");
 if (!$conexao)
-	die ("Erro de conexão com localhost, o seguinte erro ocorreu -> ".mysql_error());
+	die ("Erro de conexï¿½o com localhost, o seguinte erro ocorreu -> ".mysql_error());
 //conectando com a tabela do banco de dados
-$banco = mysql_select_db("clientes",$conexao);
+$banco = mysql_select_db("mip",$conexao);
 if (!$banco)
-	die ("Erro de conexão com banco de dados, o seguinte erro ocorreu -> ".mysql_error());
+	die ("Erro de conexï¿½o com banco de dados, o seguinte erro ocorreu -> ".mysql_error());
 
 
 
-$query = "INSERT INTO `clientes` ( `nome` , `email` , `sexo` , `ddd` , `telefone` , `endereço` , `cidade` , `estado` , `bairro` , `país` , `login` , `senha` , `news` , `id` ) 
+$query = "INSERT INTO `clientes` ( `nome` , `email` , `sexo` , `ddd` , `telefone` , `endereï¿½o` , `cidade` , `estado` , `bairro` , `paï¿½s` , `login` , `senha` , `news` , `id` ) 
 VALUES ('$nome', '$email', '$sexo', '$ddd', '$tel', '$endereco', '$cidade', '$estado', '$bairro', '$pais', '$login', '$senha', '$news', '')";
 
 mysql_query($query,$conexao);
 
-echo "Seu cadastro foi realizado com sucesso!<br>Agradecemos a atenção.";
+echo "Seu cadastro foi realizado com sucesso!<br>Agradecemos a atenï¿½ï¿½o.";
 ?> 
 </body>
 </html>
