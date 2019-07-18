@@ -47,7 +47,7 @@ echo "<script> alert('Sua mensagem foi enviada. Entraremos em contato');</script
 } 
 ?>
  
- <form action="<? $PHP_SELF; ?>" method="POST"> 
+ <form action="<? $PHP_SELF; ?>" method="post"> 
  <p> 
  Nome:<br /> 
  <input type="text" size="30" name="nome"> 
