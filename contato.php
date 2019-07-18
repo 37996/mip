@@ -5,8 +5,8 @@ if (isset($_POST['BTEnvia'])) {
  //====================================================
  $nome = $_POST['nome'];
  $email = $_POST['email'];
- $telefone = $_POST['telefone']; 
- $mensagem = $_POST['mensagem'];
+ $subject = $_POST['subject']; 
+ $message = $_POST['message'];
  //====================================================
  
  //REMETENTE --> ESTE EMAIL TEM QUE SER VALIDO DO DOMINIO
@@ -25,8 +25,8 @@ if (isset($_POST['BTEnvia'])) {
  //====================================================
  $email_conteudo = "Nome = $nome \n"; 
  $email_conteudo .= "Email = $email \n";
- $email_conteudo .= "Telefone = $telefone \n"; 
- $email_conteudo .= "Mensagem = $mensagem \n"; 
+ $email_conteudo .= "Subject = $subject \n"; 
+ $email_conteudo .= "Message = $message \n"; 
  //====================================================
  
  //Seta os Headers (Alterar somente caso necessario) 
@@ -57,14 +57,14 @@ echo "<script> alert('Sua mensagem foi enviada. Entraremos em contato');</script
  <input type="text" size="30" name="email"> 
  </p>   
  <p> 
- Telefone:<br /> 
- <input type="text" size="35" name="telefone"> 
+ Subject:<br /> 
+ <input type="text" size="35" name="subject"> 
  </p>   
  <p> 
  Mensagem:<br /> 
- <input type="text" size="35" name="mensagem"> 
+ <input type="text" size="35" name="message"> 
  </p>   
  <p>
-          <input type="submit" name="BTEnvia" value="Enviar"> 
-   <input type="reset" name="BTApaga" value="Apagar">
+          <!-- <input type="submit" name="BTEnvia" value="Enviar"> 
+   <input type="reset" name="BTApaga" value="Apagar"> -->
         </p>
