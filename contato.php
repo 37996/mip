@@ -65,6 +65,6 @@ echo "<script> alert('Sua mensagem foi enviada. Entraremos em contato');</script
  <input type="text" size="35" name="message"> 
  </p>   
  <p>
-          <!-- <input type="submit" name="BTEnvia" value="Enviar"> 
-   <input type="reset" name="BTApaga" value="Apagar"> -->
-        </p> -->
+          <input type="submit" name="BTEnvia" value="Enviar"> 
+   <input type="reset" name="BTApaga" value="Apagar"> 
+        </p> --> 
